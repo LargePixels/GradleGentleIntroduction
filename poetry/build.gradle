@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'commons-codec:commons-codec:1.6'
+}
+
+task caesar(type: JavaExec) {
+  main = 'net.largepixels.poetry.Poetry'
+  classpath = sourceSets.main.runtimeClasspath
+}
